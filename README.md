@@ -1,1 +1,1 @@
-# jimin-s-portfolio
+# jimin-portfolio
