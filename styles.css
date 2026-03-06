@@ -381,14 +381,14 @@ box-shadow: 0 0 14px rgba(255,214,0,0.35);
 
 /* Reveal animation */
 .reveal{
-opacity: 0;
-transform: translateY(18px);
-transition: opacity 650ms ease, transform 650ms ease;
-will-change: opacity, transform;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 650ms ease, transform 650ms ease;
+  will-change: opacity, transform;
 }
 .reveal.is-visible{
-opacity: 1;
-transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Respect reduced motion */
@@ -411,4 +411,5 @@ opacity: 0.6;
 #app{
 position: relative;
 z-index: 1;          
+
 }
