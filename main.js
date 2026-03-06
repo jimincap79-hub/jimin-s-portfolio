@@ -1,5 +1,4 @@
 
-<script src="main.js"></script>
 console.log("starfield:", document.getElementById("starfield"));
 
 // Year
@@ -155,4 +154,5 @@ if (prefersReduced && canvas && ctx) drawStarfield();
 document.addEventListener("mousemove", (e) => {
 mouseX = (e.clientX / window.innerWidth) - 0.5;
 mouseY = (e.clientY / window.innerHeight) - 0.5;
+
 });
