@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <div id="app">
+    <div class="progress" aria-hidden="true">
+      <div class="progress__bar" id="progressBar"></div>
+    </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#top" aria-label="홈으로">PORTFOLIO</a>
+
+      <nav class="nav" aria-label="메인 메뉴">
+        <button class="nav__toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+          ☰
+        </button>
+
+        <ul class="nav__list" id="navList">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#dev-log">Dev Log</a></li>
+          <li><a href="#contact" class="nav__cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="badge">3차 프로젝트</p>
+          <h1>
+            안녕하세요, <br />
+            <span class="highlight">성장 중인 프론트엔드 개발자 김지민</span>입니다.
+          </h1>
+          <p class="sub">
+            결과물보다 <b>과정과 구조</b>를 기록합니다. <br />
+            DevFolio 팀 프로젝트와 함께 개인 포트폴리오를 만들고 있습니다.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">프로젝트 보기</a>
+            <a class="btn btn--ghost" 
+href="https://github.com/jimincap79-hub" 
+target="_blank" 
+rel="noreferrer">
+GitHub
+</a>
+          </div>
+
+          <ul class="hero__meta">
+            <li>📍 South Korea</li>
+            <li>💼 Front-end (Beginner)</li>
+            <li>🧩 DevFolio Team Project</li>
+          </ul>
+        </div>
+
+        <div class="hero__card" aria-hidden="true">
+          <div class="hero__cardTop">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="hero__cardBody">
+            <p class="mono">$ npm run build</p>
+            <p class="mono success">✔ build success</p>
+            <p class="mono">$ git push origin main</p>
+            <p class="mono accent">→ deployed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+      <section class="section reveal" id="about">
+      <div class="container">
+        <div class="section__head">
+          <h2>About</h2>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>저는 이런 방식으로 개발합니다</h3>
+            <ul class="list">
+              <li>빠르고 직관적이게 UI부터 설계합니다.</li>
+              <li>작은 단위부터 만들고, 점진적으로 확장합니다.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>지금 집중하는 것</h3>
+            <div class="chips">
+              <span class="chip">반응형</span>
+              <span class="chip">컴포넌트 구조</span>
+              <span class="chip">상태 관리 기초</span>
+              <span class="chip">배포(GitHub Pages)</span>
+            </div>
+
+            <div class="note">
+              <p><b>Tip</b> : 각주를 꼼꼼하게 넣는 습관기르기</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+<section class="section reveal" id="skills">
+      <div class="container">
+        <div class="section__head">
+          <h2>Skills</h2>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <h3>Frontend</h3>
+            <ul class="list">
+              <li>HTML / Semantic</li>
+              <li>CSS / Flex, Grid</li>
+              <li>JavaScript (Basics)</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Tools</h3>
+            <ul class="list">
+              <li>Git / GitHub</li>
+              <li>Figma</li>
+              <li>VS Code</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Learning</h3>
+            <ul class="list">
+              <li>API 연동 패턴</li>
+              <li>상태 관리 사고</li>
+              <li>접근성(A11y)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+<section class="section reveal" id="projects">
+  <div class="container">
+    <div class="section__head">
+      <h2>Projects</h2>
+    </div>
+
+    <div class="grid grid--2">
+      <article class="card project">
+        <div class="project__top">
+          <h3>DevFolio (Team)</h3>
+          <span class="tag tag--progress">진행중</span>
+        </div>
+        <p class="muted">개발자 포트폴리오 큐레이션 플랫폼.</p>
+        <ul class="list">
+          <li>역할: UI 구조 설계 / 페이지 구현</li>
+          <li>핵심: 필터링 UX / 반응형</li>
+        </ul>
+      </article>
+
+      <article class="card project">
+        <div class="project__top">
+          <h3>Personal Portfolio</h3>
+          <span class="tag tag--progress">완료</span>
+        </div>
+        <p class="muted">네이비&옐로우 테마 개인 포트폴리오.</p>
+        <ul class="list">
+          <li>느낀점: 팀프로젝트에 맞춰 개인 포트폴리오를 설계하고 구현한 경험은 무척 유용했습니다. 네이비 테마 색깔에 걸맞는 인터랙티브 디자인을 적용해보며 
+            사용자 경험을 중요하게 생각하게 되었습니다.</li>
+          <li>목표: 섹션 기반 구조 + 기록형 포트폴리오</li>
+          <li>포인트: 스크롤/네비 UX + 인터랙티브</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+    <!-- Dev Log -->
+<section class="section reveal" id="dev-log">
+      <div class="container">
+        <div class="section__head">
+          <h2>Dev Log</h2>
+          <p></p>
+        </div>
+
+        <div class="timeline">
+          <div class="time">
+            <div class="time__date">Day 1</div>
+            <div class="time__body">
+              <h3>HTML 구조 잡기</h3>
+              <p class="muted">섹션 구성 / 시맨틱 태그 적용 / 네비게이션 앵커 연결</p>
+            </div>
+          </div>
+
+          <div class="time">
+            <div class="time__date">Day 2</div>
+            <div class="time__body">
+              <h3>네이비&옐로우 테마 적용</h3>
+              <p class="muted">컬러 변수 / 버튼 스타일 / 카드 레이아웃</p>
+            </div>
+          </div>
+
+                    <div class="time">
+            <div class="time__date">Day 3</div>
+            <div class="time__body">
+              <h3>CSS, JavaScript 및 인터랙티브 기능 추가</h3>
+              <p class="muted">검토 / 배경 및 인터랙티브 기능 추가</p>
+            </div>
+          </div>
+
+          <div class="time">
+            <div class="time__date">Day 4</div>
+            <div class="time__body">
+              <h3>GitHub Pages 배포</h3>
+              <p class="muted">repo 생성 → push → settings → pages → 배포 URL 실행 확인 및 검토</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+<section class="section reveal" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>Links</h3>
+            <ul class="list">
+              <li><b>Email</b> : <a href="mailto:jimincap79@gmail.com">jimincap79@gmail.com</a></li>
+              <li><b>GitHub</b> : <a href="https://github.com/jimincap79-hub" target="_blank" rel="noreferrer">github.com/jimincap79-hub</a></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Message</h3>
+            <form class="form" onsubmit="return false;">
+              <label>
+                <span>이름</span>
+                <input type="text" placeholder="홍길동" />
+              </label>
+              <label>
+                <span>메시지</span>
+                <textarea rows="4" placeholder="간단히 남겨주세요."></textarea>
+              </label>
+              <button class="btn btn--primary" type="button" id="fakeSend">보내기(데모)</button>
+              <p class="muted tiny" id="sendHint" aria-live="polite"></p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="muted tiny">© <span id="year"></span> Jimin's Portfolio.</p>
+      <a class="toTop" href="#top">↑ Top</a>
+    </div>
+  </footer>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
